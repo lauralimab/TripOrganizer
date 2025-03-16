@@ -1,0 +1,96 @@
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1e1e1e;
+    color: #7d4700;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 200%;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 150%;
+}
+
+/* Tabela de voos */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+section h2 {
+    color: #7d4700;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #7d4700;
+    color: black;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status dos voos */
+.status-confirmado {
+    color: #28a745; /* Verde */
+    font-weight: bold;
+}
+
+.status-atrasado {
+    color: #ffc107; /* Amarelo */
+    font-weight: bold;
+}
+
+.status-cancelado {
+    color: #dc3545; /* Vermelho */
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1e1e1e;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+footer p a {
+    color: white;
+}
