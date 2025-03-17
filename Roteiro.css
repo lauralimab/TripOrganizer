@@ -1,11 +1,13 @@
 /* Estilos gerais */
 body {
     font-family: 'roboto condensed', sans-serif;
+    position: relative;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
+    align-items: center;
 }
 
 /* Cabeçalho */
@@ -25,12 +27,18 @@ header h1 {
 section {
     padding: 20px;
     margin: 20px auto;
-    max-width: 800px;
+    margin-left: 8px auto;
+    margin-right: 8px auto;
+    max-width: 550px;
     background-color: white;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    justify-content: center;
 }
 
+#dia4 {
+    margin-bottom: 65px;
+}
 section h2 {
     color: #7d4700;
 }
@@ -54,12 +62,14 @@ section img {
 
 /* Rodapé */
 footer {
-    text-align: center;
-    padding: 10px;
     background-color: #1e1e1e;
-    color: white;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 footer p a {

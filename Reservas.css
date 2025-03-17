@@ -42,6 +42,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
 }
