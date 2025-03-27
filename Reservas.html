@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="Reservas.css">
+</head>
+
+<header>
+    <nav>
+        <a href="index.html" role="button">Início</a>
+        <a href="Roteiro.html" target="_self" role="button">Roteiro Completo</a>
+        <a href="Reservas.html" target="_self" role="button">Reservas</a>
+        <a href="Voos.html" target="_self" role="button">Voos</a>
+    </nav>
+</header>
+
+<body>
+
+    <h2>Reservas de Restaurantes</h2>
+
+    <!-- Formulário para adicionar reservas -->
+    <form id="reservaForm">
+        <div class="container">
+        <label for="restaurante">Restaurante:</label>
+        <input type="text" id="restaurante" name="restaurante" required>
+
+        <label for="dia">Dia:</label>
+        <input type="text" id="dia" name="dia" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="horario">Horário:</label>
+        <input type="time" id="horario" name="horario" required>
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" required>
+
+        <button type="submit">Adicionar Reserva</button>
+    </form>
+
+    <!-- Tabela para exibir as reservas -->
+    <table id="tabelaReservas">
+        <thead>
+            <tr>
+                <th>Restaurante</th>
+                <th>Dia</th>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Descrição</th>
+                <th>Ações</th> <!-- Coluna para o botão de exclusão -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As reservas serão adicionadas aqui dinamicamente -->
+        </tbody>
+    </table>
+
+    <!-- Script JavaScript para adicionar, excluir e salvar reservas -->
+    <script>
+        // Função para carregar as reservas salvas no localStorage
+        function carregarReservas() {
+         const reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+            const tabela = document.getElementById('tabelaReservas').getElementsByTagName('tbody')[0];
+
+            reservas.forEach(reserva => {
+                const novaLinha = tabela.insertRow();
+                novaLinha.insertCell(0).textContent = reserva.restaurante;
+                novaLinha.insertCell(1).textContent = reserva.dia;
+                novaLinha.insertCell(2).textContent = reserva.data;
+                novaLinha.insertCell(3).textContent = reserva.horario;
+                novaLinha.insertCell(4).textContent = reserva.descricao;
+
+                // Cria a célula para o botão de exclusão
+                const celulaAcoes = novaLinha.insertCell(5);
+                const botaoExcluir = document.createElement('button');
+                botaoExcluir.textContent = 'Excluir';
+                botaoExcluir.className = 'excluir';
+                celulaAcoes.appendChild(botaoExcluir);
+
+                // Adiciona um evento de clique ao botão de exclusão
+                botaoExcluir.addEventListener('click', function() {
+                    tabela.deleteRow(novaLinha.rowIndex - 1); // Remove a linha da tabela
+                    salvarReservas(); // Atualiza o localStorage após a exclusão
+            });
+        });
+    }
+
+        // Função para salvar as reservas no localStorage
+        function salvarReservas() {
+            const tabela = document.getElementById('tabelaReservas').getElementsByTagName('tbody')[0];
+            const reservas = [];
+
+            for (let i = 0; i < tabela.rows.length; i++) {
+                const row = tabela.rows[i];
+                reservas.push({
+                    restaurante: row.cells[0].textContent,
+                    dia: row.cells[1].textContent,
+                    data: row.cells[2].textContent,
+                    horario: row.cells[3].textContent,
+                    descricao: row.cells[4].textContent
+                });
+            }
+
+            localStorage.setItem('reservas', JSON.stringify(reservas));
+        }
+
+        // Função para adicionar uma reserva à tabela
+        document.getElementById('reservaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Captura os valores dos campos do formulário
+            const restaurante = document.getElementById('restaurante').value;
+            const dia = document.getElementById('dia').value;
+            const data = document.getElementById('data').value;
+            const horario = document.getElementById('horario').value;
+            const descricao = document.getElementById('descricao').value;
+
+            // Cria uma nova linha na tabela
+            const tabela = document.getElementById('tabelaReservas').getElementsByTagName('tbody')[0];
+            const novaLinha = tabela.insertRow();
+
+            // Insere as células na nova linha
+            novaLinha.insertCell(0).textContent = restaurante;
+            novaLinha.insertCell(1).textContent = dia;
+            novaLinha.insertCell(2).textContent = data;
+            novaLinha.insertCell(3).textContent = horario;
+            novaLinha.insertCell(4).textContent = descricao;
+
+            // Cria a célula para o botão de exclusão
+            const celulaAcoes = novaLinha.insertCell(5);
+            const botaoExcluir = document.createElement('button');
+            botaoExcluir.textContent = 'Excluir';
+            botaoExcluir.className = 'excluir';
+            celulaAcoes.appendChild(botaoExcluir);
+
+            // Adiciona um evento de clique ao botão de exclusão
+            botaoExcluir.addEventListener('click', function() {
+                tabela.deleteRow(novaLinha.rowIndex - 1); // Remove a linha da tabela
+                salvarReservas(); // Atualiza o localStorage após a exclusão
+            });
+
+            // Salva as reservas no localStorage
+            salvarReservas();
+
+            // Limpa os campos do formulário
+            document.getElementById('reservaForm').reset();
+        });
+
+        // Carrega as reservas salvas ao carregar a página
+        carregarReservas();
+    </script>
+     
+     <footer>
+        <div id="footer">
+            <p>&copy; Desenvolvido por <a href="https://www.linkedin.com/in/laura-lima-348225293" target="_blank">Laura Lima</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

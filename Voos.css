@@ -1,0 +1,205 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0;
+    background-image: url(./img/voos.avif);
+    background-attachment: fixed;
+    background-size: cover; /* Cobrir toda a área da seção */
+    background-repeat: no-repeat; /* Evitar repetição */
+    background-position: center; /* Centralizar a imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinhar no topo */
+    min-height: 100vh;
+}
+/* Cabeçalho */
+header {
+    background-color: #0000007f;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+
+header h1 {
+margin: 0;
+margin-top: 25px;
+color: #7d4700;
+}
+
+header nav {
+background-color: #0000007f;
+position: fixed;
+width: 100%;
+padding-top: 8px;
+padding-bottom: 8px;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+header nav a {
+color: white;
+font-size: 20px;
+text-decoration: none;
+padding: 5px 10px;
+border-radius: 10px;
+transition: background-color 0.3s;
+margin: 0 5px; /* Espaçamento entre os links */
+}
+
+header nav a:hover {
+background-color: #0000007f;
+}
+
+/* Títulos */
+h2 {
+    color: #7d4700;
+    margin: 10px 0;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Seções principais */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    margin-bottom: 60px;
+    max-width: 1200px;
+    width: 90%;
+    background-color: #0000007f;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    box-sizing: border-box;
+}
+
+section h1 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tabela de voos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+table th {
+    background-color: #7d4700;
+    color: white;
+}
+
+table tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Status dos voos */
+.status-confirmado {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-atrasado {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.status-cancelado {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background-color: #0000007f;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+#footer p {
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header nav a {
+        font-size: 16px;
+        padding: 6px 8px;
+        margin: 0 3px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+    section {
+        margin-top: 50px;
+        padding: 15px;
+        width: 95%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        font-size: 14px;
+        padding: 4px 6px;
+        margin: 0 2px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    table th, table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}

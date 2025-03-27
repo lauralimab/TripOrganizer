@@ -1,0 +1,261 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0;
+    background-image: url(./img/background\ restaurant.jpg);
+    background-attachment: fixed;
+    background-size: cover; /* Cobrir toda a área da seção */
+    background-repeat: no-repeat; /* Evitar repetição */
+    background-position: center; /* Centralizar a imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinhar no topo */
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+    header {
+        background-color: #0000007f;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+    }
+
+
+header h1 {
+    margin: 0;
+    margin-top: 25px;
+    color: #7d4700;
+}
+
+header nav {
+    background-color: #0000007f;
+    position: fixed;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    margin: 0 5px; /* Espaçamento entre os links */
+}
+
+header nav a:hover {
+    background-color: #0000007f;
+}
+
+h2 {
+    color: white;
+    margin: 10px 0;
+    margin-top: 70px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.container {
+    background-color: #0000007f;
+    padding: 20px;
+    padding-top: 24px;
+    border-radius: 8px;
+    width: auto;
+    min-width: 200px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+form {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px; /* Adicionar padding para mobile */
+}
+
+label {
+    font-family: 'roboto condensed', sans-serif;
+    font-weight: bold;;
+    display: block;
+    margin-top: 10px;
+    color: white;
+    text-align: left;
+    width: 100%;
+    max-width: 650px;
+}
+
+input {
+    font-family: 'roboto condensed', sans-serif;
+    width: 100%;
+    max-width: 650px;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-sizing: border-box; /* Garantir que padding não aumente a largura */
+    border:#ddd;
+
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #7d4700;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #965500ce;
+}
+
+table {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 60px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+
+}
+
+table, th, td {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-radius: 8px;
+    color: #7d4700;
+
+}
+
+th {
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.excluir {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.excluir:hover {
+    background-color: #cc0000;
+}
+
+/* Footer */
+#footer {
+    background-color: #0000007f;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+#footer p {
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+    header nav a {
+        font-size: 16px;
+        padding: 6px 8px;
+        margin: 0 3px; /* Reduzir espaçamento entre links */
+    }
+
+    header h1 {
+        font-size: 24px; /* Reduzir tamanho do título */
+    }
+
+    h2 {
+        font-size: 25px; /* Reduzir tamanho do subtítulo */
+
+    }
+
+    input {
+        width: 100%; /* Garantir que o input ocupe toda a largura */
+    }
+
+    table {
+        width: 100%; /* Garantir que a tabela ocupe toda a largura */
+        max-width: 100%; /* Limitar a largura máxima */
+        margin: 10px auto; /* Centralizar a tabela */
+        margin-right: 10px; /* Adicionar margem à direita */
+        margin-bottom: 50px; /* Aumentar margem inferior */ 
+        font-size: 14px; /* Reduzir tamanho da fonte da tabela */
+        overflow-x: auto; /* Permitir rolagem horizontal se necessário */
+
+    }
+
+    th, td {
+        padding: 6px; /* Reduzir padding das células */
+        text-align: center; /* Centralizar o texto nas células */
+    }
+
+    button {
+        width: 100%; /* Botão ocupa toda a largura */
+        padding: 12px; /* Aumentar padding para facilitar o toque */
+    }
+
+     /* Ajustar o contêiner do formulário para centralização */
+     form {
+        width: 90%; /* Reduzir a largura do formulário em dispositivos móveis */
+        padding: 15px; /* Reduzir o padding interno */
+        margin: 20px auto; /* Centralizar o formulário */
+    }
+}

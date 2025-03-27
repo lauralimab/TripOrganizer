@@ -1,0 +1,118 @@
+/* Estilos gerais */
+body {
+    background-image: url(./img/Background\ roteiro.avif);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinhar no topo */
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    color: white;
+    padding: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    margin-top: 25px;
+    color: #7d4700;
+}
+
+header nav {
+    background-color: #0000007f;
+    position: fixed;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header nav a {
+    color: white;
+    gap: 15px; /* Espaçamento entre os links */
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: #0000007f;
+}
+
+/* Seções do roteiro */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    margin-left: 8px auto;
+    margin-right: 8px auto;
+    max-width: 550px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    justify-content: center;
+}
+
+
+#dia4 {
+    margin-bottom: 65px;
+}
+section h2 {
+    color: #7d4700;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    color: black;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0000007f;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p a {
+    color: white;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+    header nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+    } }

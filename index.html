@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos do Jordão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" role="button">Início</a>
+            <a href="Roteiro.html" target="_self" role="button">Roteiro Completo</a>
+            <a href="Reservas.html" target="_self" role="button">Reservas</a>
+            <a href="Voos.html" target="_self" role="button">Voos</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="inicio" class="section-with-bg">
+            <div class="inicio">
+                <h1>Campos do Jordão</h1>
+                <h2>Aqui você encontra todas as informações necessárias para aproveitar ao máximo sua viagem.<br> Adicione atividades, veja o mapa da região, voos, roteiro e reservas.</h2>
+            </div>
+        </section>
+
+        <section id="agenda" class="section-with-bg">
+            <div class="container">
+                <h1>Agenda</h1>
+                <button id="toggle-theme">Alternar Tema</button>
+
+                <!-- Formulário para adicionar atividades -->
+                <form id="activity-form">
+                    <input type="text" id="title" placeholder="Título (ex: Passeio ao Parque)" required>
+                    <input type="date" id="date" required>
+                    <input type="time" id="time" required>
+                    <textarea id="description" placeholder="Descrição (ex: Levar câmera e água)" required></textarea>
+                    <button type="submit">Adicionar Atividade</button>
+                </form>
+
+                <!-- Lista de atividades -->
+                <ul id="activity-list"></ul>
+
+                <!-- Botão para exportar para PDF -->
+                <button onclick="exportToPDF()">Exportar para PDF</button>
+
+                <!-- Previsão do tempo -->
+                <div id="weather"></div>
+
+                <!-- Mapa -->
+                <div id="map" style="height: 300px; width: 100%;"></div>
+
+                <!-- Imagem com lazy loading -->
+                <img data-src="" alt="Imagem" class="lazy">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer">
+            <p>&copy; Desenvolvido por <a href="https://www.linkedin.com/in/laura-lima-348225293" target="_blank">Laura Lima</a></p>
+        </div>
+    </footer>
+
+    <!-- Inclua a biblioteca jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Inclua a API do Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjKhWz2QTatLT_cYPaULXzLLouNcJLzEQ&callback=initMap" async defer></script>
+    <!-- Inclua o script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
