@@ -1,9 +1,10 @@
 /* Estilos gerais */
 body {
     background-image: url(./img/Background\ roteiro.avif);
-    background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 0;
     display: flex;
