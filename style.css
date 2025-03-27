@@ -261,8 +261,7 @@ footer p a {
     }
 
     #inicio {
-        height: auto;
-        min-height: 70vh;
+        min-height: 80vh;
         padding: 60px 15px;
     }
 
@@ -273,7 +272,6 @@ footer p a {
 
     #inicio h2 {
         font-size: 1.2rem;
-        padding: 0 15px;
     }
 
     .container {
